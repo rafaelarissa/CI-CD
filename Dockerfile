@@ -4,8 +4,9 @@ WORKDIR /usr/src/
 
 COPY . .
 
+RUN npm i
+RUN npm run build
+
 EXPOSE 5000
 
-RUN npm i
-
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
